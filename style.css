@@ -1,0 +1,280 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@400;600;800&display=swap');
+
+:root {
+    font-family: 'Roboto', sans-serif;
+
+    --clr-primary: #ffffff;
+    --clr-secondary: #f7f7f7;
+    --clr-Heading: #353535;
+
+    --clr-text-light: #415859;
+    --clr-sec-head: #025B5D;
+    --font-primary: 'Montserrat', sans-serif;
+    --font-secondary: 'Mulish', sans-serif;
+
+    --wgt-bolder: 700;
+    --wgt-semi-bold: 600;
+    --wgt-light: 400;
+}
+
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* remove default spacing */
+/* force styling of type through styling, rather than elements */
+
+* {
+    margin: 0;
+    padding: 0;
+    font: inherit;
+}
+
+/* dark mode user-agent-styles */
+
+html {
+    color-scheme: dark light;
+}
+
+/* min body height */
+
+body {
+    min-height: 100vh;
+}
+
+/* responsive images/videos */
+img,
+picture,
+svg,
+video {
+    display: block;
+    max-width: 100%;
+}
+
+/* remove default list items style */
+li {
+    list-style: none;
+}
+
+
+/* navigation bar */
+.flex-align-center {
+    display: flex;
+    align-items: center;
+}
+
+#navbar {
+    background-color: var(--clr-secondary);
+    padding: .5rem 3%;
+    gap: 2rem;
+    color: var(--clr-text-light);
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+    position: sticky;
+    top: 0;
+    width: 100vw;
+    z-index: 10;
+}
+
+#utilities {
+    flex: 1;
+    justify-content: space-around;
+}
+
+#location {
+    flex: 1;
+    gap: 1rem;
+}
+
+.menu-list {
+    gap: 2rem;
+    padding: 0 2rem;
+}
+
+.menu-list a {
+    text-decoration: none;
+    color: inherit;
+}
+
+#playstore {
+    border: 1px solid #415859;
+    gap: 1rem;
+    border-radius: 5px;
+    padding: .5rem 1rem;
+    color: inherit;
+}
+
+#acc {
+    gap: .5rem;
+}
+
+
+/* main content */
+main {
+    font-family: var(--font-primary);
+}
+
+#sec1 {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100vw;
+}
+
+#sec1>div {
+    flex: 1;
+}
+
+#sec1>.left {
+    background: url("media/navbar/section1-left.png");
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#sec1-left-head {
+    width: 68%;
+    font-size: 3rem;
+    text-align: center;
+    color: var(--clr-primary);
+    font-weight: var(--wgt-bolder);
+}
+
+#sec2>.right {
+    background-color: aqua;
+}
+
+.search {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    flex-wrap: wrap;
+    color: var(--clr-primary);
+    align-items: center;
+}
+
+.search>div {
+    font-size: .95rem;
+}
+
+#searchinput {
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+}
+
+#searchicon {
+    position: relative;
+    left: 2rem;
+}
+
+#searchinput>input {
+    padding: 1rem 2.2em;
+    width: 40vw;
+    border: none;
+    border-radius: 4.9863px;
+    font-size: 1.2rem;
+    flex-wrap: wrap;
+}
+
+.right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.right>h2 {
+    font-size: 2rem;
+    font-weight: var(--wgt-semi-bold);
+    color: #353535;
+    padding: 1rem;
+}
+
+.services {
+    display: grid;
+    grid-template-columns: repeat(4, 8rem);
+    gap: 2rem;
+}
+
+.service {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--font-secondary);
+}
+
+#offers {
+    display: flex;
+    overflow-x: scroll;
+    gap: .5rem;
+    padding: .5rem;
+}
+
+.flat {
+    background-color: #E8625D;
+    font-family: var(--font-secondary);
+    font-weight: 800;
+    color: #FCFCFC;
+    font-size: 1.2rem;
+    display: flex;
+    padding: 0.2rem 1rem;
+    gap: 1rem;
+    position: relative;
+    left: 35%;
+}
+
+
+/* Section 2 */
+#sec2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: var(--font-primary);
+    padding: 5rem;
+}
+
+#sec2>h2 {
+    color: var(--clr-sec-head);
+    font-weight: var(--wgt-semi-bold);
+    font-size: 2.2rem;
+}
+
+#sec2>p {
+    size: 1.125rem;
+}
+
+.trending-items {
+    display: flex;
+    gap: 1rem;
+    margin-top: 3rem;
+}
+
+.card {
+    box-shadow: 0px 5.07432px 25.3716px 2.96002px rgba(57, 57, 57, 0.15);
+    border-radius: 17.9289px;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    /* justify-content: center; */
+    height: 10rem;
+    width: 13rem;
+    
+}
+.card img{
+    position: relative;
+    bottom: 1rem;
+    mix-blend-mode: color-burn;
+}
+.card p{
+    text-align: center;
+    width: 60%;
+    position: relative;
+    bottom: 1rem;
+}
