@@ -653,7 +653,6 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 5rem;
 }
 
 .qoute h1 {
@@ -757,7 +756,10 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center;
-    
+}
+
+.option:first-child{
+    color: #E8625D;
 }
 
 @media screen and (max-width: 1000px) {
@@ -946,6 +948,10 @@ footer {
 
     .customer-reviews.section {
         padding: 4rem 0;
+    }
+
+    .qoute{
+        margin-bottom: 5rem;
     }
 
     .qoute h1 {
