@@ -37,16 +37,12 @@
     font: inherit;
 }
 
-/* dark mode user-agent-styles */
-
-html {
-    color-scheme: dark light;
-}
 
 /* min body height */
 
 body {
     min-height: 100vh;
+    overflow-x: hidden;
 }
 
 /* responsive images/videos */
@@ -62,6 +58,10 @@ video {
 .flex-align-center {
     display: flex;
     align-items: center;
+}
+
+.navbar-search {
+    display: none;
 }
 
 #navbar {
@@ -117,6 +117,7 @@ main {
     font-family: var(--font-primary);
 }
 
+
 #sec1 {
     display: flex;
     flex-wrap: wrap;
@@ -164,7 +165,6 @@ main {
 #searchinput {
     display: flex;
     align-items: center;
-    /* justify-content: center; */
 }
 
 #searchicon {
@@ -178,7 +178,6 @@ main {
     border: none;
     border-radius: 4.9863px;
     font-size: 1.2rem;
-    flex-wrap: wrap;
 }
 
 .right {
@@ -187,6 +186,13 @@ main {
     align-items: center;
 }
 
+.small-secondary-clr-head {
+    display: none;
+    color: var(--clr-sec-head);
+    margin: .7rem;
+    margin-top: 1rem;
+    font-weight: var(--wgt-semi-bold);
+}
 
 .right>h2 {
     font-size: 2rem;
@@ -201,10 +207,9 @@ main {
     gap: 2rem;
 }
 
-/* 
-    width: 100%;
-    grid-template-columns: repeat(auto-fit, minmax(8rem, 1fr));
-     */
+.service span {
+    text-align: center;
+}
 
 .service {
     display: flex;
@@ -231,7 +236,7 @@ main {
     padding: 0.2rem 1rem;
     gap: 1rem;
     position: relative;
-    left: 35%;
+    left: 33%;
 }
 
 
@@ -276,6 +281,7 @@ main {
 .card img {
     position: relative;
     bottom: 1rem;
+    width: 9em;
 }
 
 .card p {
@@ -283,6 +289,7 @@ main {
     width: 60%;
     position: relative;
     bottom: 1rem;
+    font-size: 1em;
 }
 
 /* section 3 */
@@ -316,7 +323,7 @@ main {
 }
 
 .safe-content p {
-    font-size: 2.2rem;
+    font-size: 2.2em;
     color: var(--clr-sec-head);
     font-weight: var(--wgt-semi-bold);
     padding-left: 1rem;
@@ -329,12 +336,12 @@ main {
 .safe-content ul {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    padding-left: 2rem;
+    padding-left: 2em;
 }
 
 .safe-content ul li {
     font-family: var(--font-secondary);
-    padding: 1rem 2rem 1rem 0;
+    padding: 1em 2rem 1em 0;
 }
 
 .safe-container img {
@@ -488,6 +495,7 @@ main {
 
 .products .card-items img {
     align-self: center;
+    width: 6em;
 }
 
 .products .card-items {
@@ -498,8 +506,7 @@ main {
 }
 
 .card {
-    min-width: 200px;
-    min-height: 150px;
+    min-width: 120px;
 }
 
 .products>.head {
@@ -682,49 +689,273 @@ footer {
     font-weight: 700;
 }
 
-.footerlinks{
+.footerlinks {
     font-family: var(--font-secondary);
     padding: 2rem 1rem;
     font-weight: var(--wgt-semi-bold);
 }
-.footerlinks ul li{
+
+.footerlinks ul li {
     list-style: none;
 }
 
-.footerlinks ul{
+.footerlinks ul {
     display: flex;
     justify-content: space-between;
     gap: 2rem;
 }
 
-.download-contact{
+.download-contact {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 3rem;
     padding: 4rem 2rem;
 }
-.contact-details{
+
+.contact-details {
     font-size: .8rem;
 }
-.dc{
+
+.dc {
     display: flex;
     flex-direction: column;
     gap: 2rem;
     align-items: baseline;
 }
 
-.dc h4{
+.dc h4 {
     color: #2AEAEE;
     font-weight: var(--wgt-semi-bold);
 }
 
-.social-handles{
+.social-handles {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 2rem;
 }
-.copyrights{
+
+.copyrights {
     padding: 2rem;
     text-align: center;
+}
+
+.mobile-footer {
+    display: none;
+    font-size: 11px;
+    width: 100vw;
+    justify-content: space-around;
+    background-color: var(--clr-primary);
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.25);
+    padding: 1rem 0;
+    position: fixed;
+    bottom: 0;
+    z-index: 10;
+}
+
+.option {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media screen and (max-width: 1000px) {
+
+    #logo,
+    #download,
+    #menu-list,
+    #cart,
+    .right h2,
+    .flat {
+        display: none;
+    }
+
+    #navbar {
+        flex-direction: column;
+        align-items: normal;
+        gap: .5rem;
+        max-width: 100%;
+    }
+
+    #location {
+        justify-content: space-between;
+        font-size: .9rem;
+    }
+
+    .navbar-search {
+        display: flex;
+        align-items: center;
+    }
+
+    .navbar-search>input {
+        padding: 1rem 2.2em;
+        border: none;
+        border-radius: 4.9863px;
+        font-size: 1.2rem;
+        flex: 1;
+        height: 2rem;
+        font-size: .8rem;
+    }
+
+    #searchicon {
+        width: .8rem;
+        left: 1.3rem;
+    }
+
+    #sec1>.left {
+        display: none;
+    }
+
+    .section {
+        padding: 3rem;
+    }
+
+    .section>h2 {
+        font-size: 1rem;
+    }
+
+    .section>p {
+        font-size: .9rem;
+    }
+
+
+    #right {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .small-secondary-clr-head {
+        display: block;
+    }
+
+    #offers {
+        align-self: flex-start;
+    }
+
+    .services {
+        width: 90%;
+        grid-template-columns: repeat(auto-fit, minmax(5.6rem, 1fr));
+    }
+    .service span{
+        font-size: 0.75rem;
+    }
+    .safe-container {
+        max-width: 100%;
+        padding: 0;
+    }
+
+    .safe-content {
+        padding: 0%;
+    }
+
+    .safe-content p {
+        font-size: 14px;
+    }
+
+    .safe-container ul li {
+        font-size: 0.75rem;
+        padding: 0;
+    }
+
+    .safe-container img {
+        object-fit: cover;
+        width: 136.43px;
+    }
+
+    .card {
+        width: 130px;
+    }
+
+    .card p{
+        font-size: 0.75rem;
+    }
+    #sec5 {
+        padding: 4rem 0;
+    }
+
+    #sec6 {
+        padding: 0;
+    }
+
+    #sec6 h2 {
+        font-size: 20px;
+    }
+
+    .assurance {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .assured-cards {
+        min-width: 100%;
+        padding: 0 1rem;
+    }
+
+    .book-content h1 {
+        font-size: 0.75rem;
+    }
+
+    .book-content p {
+        font-size: 10px;
+    }
+
+    #service-button {
+        font-size: 10px;
+        padding: .5rem 1rem;
+    }
+
+    .book-service img {
+        height: 144px;
+        object-fit: cover;
+    }
+
+    .line {
+        display: none;
+    }
+
+    .products {
+        flex-direction: column;
+    }
+
+    .products h2 {
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    .products p {
+        font-size: .9rem;
+        text-align: center;
+    }
+
+    #sec10,
+    #sec12,
+    footer {
+        display: none;
+    }
+
+    .reviews {
+        gap: 1rem;
+        flex-wrap: nowrap;
+        overflow: auto;
+        align-self: normal;
+    }
+
+    .review {
+        min-width: 300px;
+    }
+
+    .customer-reviews.section {
+        padding: 4rem 0;
+    }
+
+    .qoute h1 {
+        font-size: .9rem;
+    }
+
+    .qoute img {
+        width: 8rem;
+    }
+
+    .mobile-footer {
+        display: flex;
+    }
 }
